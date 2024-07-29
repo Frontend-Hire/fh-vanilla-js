@@ -10,7 +10,7 @@ export default function AddTask({ onAddTask }) {
   };
 
   return (
-    <form className="space-x-2" onSubmit={handleAddTask}>
+    <div className="space-x-2">
       <label htmlFor="task-input">Add Task: </label>
       <input
         className="rounded border px-2 py-1"
@@ -18,7 +18,12 @@ export default function AddTask({ onAddTask }) {
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
       />
-      <button className="rounded bg-blue-500 px-2 py-1 text-white">Add</button>
-    </form>
+      <button
+        onClick={handleAddTask}
+        className="rounded bg-blue-500 px-2 py-1 text-white"
+      >
+        Add
+      </button>
+    </div>
   );
 }
